@@ -1,10 +1,10 @@
 = DESCRIPTION:
 
-Libmemcached Chef recipe.
+Libmemcached Chef recipe. Builds libmemcached from source.
 
-It installs libmemcached from source.
+https://github.com/fred/chef-libmemcached
 
-overwrite the version attributes for newer versions
+You can overwrite the version attributes for newer versions
 
 default[:libmemcached][:version] = "1.0.17"
 
@@ -15,6 +15,7 @@ Supports: ubuntu, debian, redhat, centos, fedora, suse, amazon
 
 This cookbook depends on build-essential cookbook, it also installs these packages needed for compiling:
 
+  - gcc-c++ (rhel, not part of build-essential)
   - cloog-ppl (rhel)
   - libcloog-ppl-dev (debian)
   - libcloog-ppl0 (debian)
