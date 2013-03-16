@@ -2,8 +2,6 @@
 
 Libmemcached Chef recipe. Builds libmemcached from source.
 
-https://github.com/fred/chef-libmemcached
-
 You can overwrite the version attributes for newer versions
 
 default[:libmemcached][:version] = "1.0.17"
@@ -24,20 +22,20 @@ This cookbook depends on build-essential cookbook, it also installs these packag
 
 = USAGE:
 
-rename the cloned repo to libmemcached
+Rename the cloned repo to libmemcached:
 
-git clone git@github.com:fred/chef-libmemcached.git ./libmemcached
+  git clone git@github.com:fred/chef-libmemcached.git ./libmemcached
 
 then add it to run list, optionally specifiying the version you need.
 
-```json 
-{
-  "libmemcached": {
-    "version": "1.0.17"
+```json
+  {
+    "libmemcached": {
+      "version": "1.0.17"
+    }
+    "run_list": [
+      "recipe[libmemcached]"
+    ]
   }
-  "run_list": [
-    "recipe[libmemcached]"
-  ]
-}
-
 ```
+
