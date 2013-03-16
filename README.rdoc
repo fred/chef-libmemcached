@@ -28,7 +28,7 @@ Rename the cloned repo to libmemcached:
 
 then add it to run list, optionally specifiying the version you need.
 
-```json
+
   {
     "libmemcached": {
       "version": "1.0.17"
@@ -37,5 +37,3 @@ then add it to run list, optionally specifiying the version you need.
       "recipe[libmemcached]"
     ]
   }
-```
-
