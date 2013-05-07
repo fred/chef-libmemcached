@@ -36,17 +36,16 @@ tarball_url = "https://launchpad.net/libmemcached/#{major_version}/#{version}/+d
 
 
 remote_file "/tmp/#{tarball_name}" do
- source "#{tarball_url}"
- mode "0644"
+  source "#{tarball_url}"
+  mode "0644"
 end
 
 execute "tar" do
- user "root"
-
- cwd "/tmp/"
- command "tar zxf #{tarball_name}"
- creates "/tmp/" + tarball_name.gsub(".tar.gz", "")
- action :run
+  user "root"
+  cwd "/tmp/"
+  command "tar zxf #{tarball_name}"
+  creates "/tmp/" + tarball_name.gsub(".tar.gz", "")
+  action :run
 end
 
 
